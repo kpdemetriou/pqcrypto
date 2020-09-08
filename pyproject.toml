@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "pqcrypto"
+version = "0.1.3"
+description = "Post-quantum cryptography for Python."
+authors = ["Phil Demetriou <inbox@philonas.net>"]
+readme = "README.md"
+license = "BSD-3-Clause"
+packages = [{ include = "pqcrypto" }]
+build = "extend.py"
+include = ["algorithms.py", "compile.py", "extend.py", "sources/**/*", "LICENSE"]
+repository = "https://github.com/kpdemetriou/pqcrypto"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: System Administrators",
+    "Intended Audience :: Telecommunications Industry",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: C",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Security",
+    "Topic :: Security :: Cryptography",
+    "Topic :: Utilities",
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+cffi = "^1.14.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.0.1"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
